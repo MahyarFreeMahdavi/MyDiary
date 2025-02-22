@@ -23,10 +23,33 @@
             margin-bottom: 10px;
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	    max-height: 150px;  /* ارتفاع ثابت */
+            overflow: hidden;
+            position: relative;
+            transition: max-height 0.3s ease-in-out;
+        }
+	.entry.expanded {
+            max-height: none; /* اجازه به نمایش کل محتوا */
+        }
+	.toggle-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #007bff;
+            color: white;
+            padding: 5px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
         }
     </style>
 </head>
 <body>
+	
     <h1>
     	یچیزی تو مایه های روزمرگی
     </h1>
@@ -40,13 +63,28 @@
 		همچنان در چهارم اسفند هستیم، راجع به این بچه وبسایت هم میتونم اینو بگم که یه جاییه واسه اینکه یه آمار بدم، یه آمار پیشرفتِ روزانه یا شاید حالا چند روز یک بار.
 		<br>
 		چرا اینجا، چرا اینجوری، چرا بدین شکل و... همه اینا رو آروم آروم همینجا میگم، در آینده ای نزدیک.
+		<br>
+		فعلا میخوام با پر کردن این کادر با متن های چرت و پرت، بتونم تست بگیرم ببینم این دکمه ای که برای جلوگیری از کشیدگی این کادر گذاشته ام، کار میکنه یا نه.
 	</p>
+	<div class="toggle-btn" onclick="toggleText(this)">▼</div>
     </div>
 
     <!-- <div class="entry">
         <h2>عنوان خاطره دیگر</h2>
         <p>متن خاطره بعدی در اینجا قرار می‌گیرد...</p>
     </div> -->
-	
+    <script>
+        function toggleText(button) {
+            var entry = button.parentElement;
+            entry.classList.toggle("expanded");
+
+            // تغییر شکل فلش
+            if (entry.classList.contains("expanded")) {
+                button.textContent = "▲";
+            } else {
+                button.textContent = "▼";
+            }
+        }
+    </script>
 </body>
 </html>
