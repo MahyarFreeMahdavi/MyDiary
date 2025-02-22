@@ -1,0 +1,75 @@
+/*
+فونت تگ های هدر: Vazir
+فونت متن های زیر هدرها: Shabnam
+*/
+
+body {
+    font-family: 'Vazir', sans-serif;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('fonts/vazir/Vazir.woff2') format('woff2'),
+         url('fonts/vazir/Vazir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Shabnam';
+    src: url('fonts/shabnam/Shabnam.woff2') format('woff2'),
+         url('fonts/shabnam/Shabnam.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2 {
+    border: 2px solid #4CAF50; /* حاشیه سبز */
+    padding: 10px; /* فضای داخلی */
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* سایه تیره‌تر */
+	transition: all 0.3s ease-in-out; /* اعمال ترنزیشن بر روی تمام ویژگی‌ها */
+	font-family: 'Vazir', sans-serif;
+}
+
+h1 {
+    font-size: 36px; /* اندازه بزرگتر برای h1 */
+    font-weight: bold; /* ضخیم بودن متن */
+    text-align: center; /* متن وسط‌چین */
+}
+
+h2 {
+    font-size: 28px; /* اندازه متوسط برای h2 */
+    font-weight: normal; /* ضخامت نرمال */
+    text-align: right; /* تراز متن به راست */
+}
+
+h1:hover, h2:hover {
+    color: #fff; /* تغییر رنگ متن به سفید */
+    background-color: #4CAF50; /* پس‌زمینه سبز */
+    cursor: pointer; /* نشانگر موس تغییر کند */
+}
+
+p {
+    font-family: 'Shabnam', sans-serif;
+}
+
+ul {
+    display: flex;            /* تبدیل لیست به یک ردیف */
+    justify-content: space-around; /* فاصله‌دهی یکنواخت بین آیتم‌ها */
+    padding: 0;               /* حذف پدینگ پیش‌فرض */
+    list-style: none;         /* حذف بولت از لیست */
+}
+
+li {
+    padding: 10px;            /* فاصله داخلی برای هر آیتم */
+    font-size: 18px;          /* سایز فونت */
+    cursor: pointer;          /* نشانه‌گر موس به شکل دست */
+}
+
+li:hover {
+    color: #4CAF50;           /* تغییر رنگ هنگام هاور */
+}
+
+a{
+	text-decoration: none;
+}
