@@ -1,90 +1,43 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        My Diary
-    </title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            text-align: center;
-        }
-        .entry {
-            background: white;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-	    max-height: 150px;  /* ارتفاع ثابت */
-            overflow: hidden;
-            position: relative;
-            transition: max-height 0.3s ease-in-out;
-        }
-	.entry.expanded {
-            max-height: none; /* اجازه به نمایش کل محتوا */
-        }
-	.toggle-btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #007bff;
-            color: white;
-            padding: 5px;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            position: absolute;
-            bottom: 5px;
-            right: 10px;
-        }
-    </style>
+    <title>یادگیری من در Front-End</title>
+    <link rel="stylesheet" href="css/style.css">
+	<!-- <link href="https://cdn.fontcdn.ir/font/vazir/Vazir.css" rel="stylesheet"> -->
 </head>
-<body>
-	
-    <h1>
-    	یچیزی تو مایه های روزمرگی
-    </h1>
-    
-    <div class="entry">
-        <h2>چهارم اسفند</h2>
-        <p>
-		خب، تازه شروع شد دیگه، آروم آروم بیشترش خواهم کرد.
-    		<br>
-		<br>
-		همچنان در چهارم اسفند هستیم، راجع به این بچه وبسایت هم میتونم اینو بگم که یه جاییه واسه اینکه یه آمار بدم، یه آمار پیشرفتِ روزانه یا شاید حالا چند روز یک بار.
-		<br>
-		چرا اینجا، چرا اینجوری، چرا بدین شکل و... همه اینا رو آروم آروم همینجا میگم، در آینده ای نزدیک.
-		<br>
-		فعلا میخوام با پر کردن این کادر با متن های چرت و پرت، بتونم تست بگیرم ببینم این دکمه ای که برای جلوگیری از کشیدگی این کادر گذاشته ام، کار میکنه یا نه.
-	</p>
-	<div class="toggle-btn" onclick="toggleText(this)">▼</div>
-    </div>
+<body dir="rtl">
+    <header>
+        <h1>مسیر یادگیری من در فرانت‌اند</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">خانه</a></li>
+                <li><a href="#projects">پروژه‌ها</a></li>
+                <li><a href="#blog">بلاگ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- <div class="entry">
-        <h2>عنوان خاطره دیگر</h2>
-        <p>متن خاطره بعدی در اینجا قرار می‌گیرد...</p>
-    </div> -->
-    <script>
-        function toggleText(button) {
-            var entry = button.parentElement;
-            entry.classList.toggle("expanded");
+    <section id="home">
+        <h2>اینجا؟ وبسایت شخصی من...</h2>
+        <p>این وبسایت نمایانگر روند یادگیری من در برنامه‌نویسی فرانت‌اند است. در اینجا تجربیات و پروژه‌هایم را به اشتراک می‌گذارم.</p>
+    </section>
 
-            // تغییر شکل فلش
-            if (entry.classList.contains("expanded")) {
-                button.textContent = "▲";
-            } else {
-                button.textContent = "▼";
-            }
-        }
-    </script>
+    <section id="projects">
+        <h2>پروژه‌های من</h2>
+        <p>در این بخش، پروژه‌هایی که ساخته‌ام و تجربیاتم از آن‌ها را خواهید دید.</p>
+        <!-- می‌توانی اینجا پروژه‌های خود را اضافه کنی -->
+    </section>
+
+    <section id="blog">
+        <h2>بلاگ یادگیری</h2>
+        <p>در این بخش، مقالات و یادداشت‌هایی که در مورد مطالب جدیدی که یاد گرفته‌ام می‌نویسم، منتشر خواهد شد.</p>
+        <!-- در اینجا می‌توانی پست‌های بلاگ خود را اضافه کنی -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 یادگیری من در فرانت‌اند</p>
+    </footer>
 </body>
 </html>
